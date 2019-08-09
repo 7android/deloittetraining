@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type="text/javascript">
+function validate()
+{
+	var usern = document.getElementById("user").value;
+	var pass = document.getElementById("pass").value;
+	var erru = document.getElementById("erru");
+	var erre = document.getElementById("erre");
+	var succ = document.getElementById("succ");
+
+	if (usern.length == 0)
+		{
+		erru.innerHTML = "Please enter the name to proceed";
+		return false;
+		}
+	else if (pass.length == 0)
+		{
+		erru.innerHTML = "";
+		erre.innerHTML = "Please enter the password to proceed";
+		return false;
+		}
+	else if (pass.length > 0 && pass.length < 6)
+		{
+		erru.innerHTML = "";
+		erre.innerHTML = "Password length must be greater than 6 to proceed";
+		return false;
+		}
+	else
+		{
+			erre.innerHTML = "";
+			succ.innerHTML = "Welcome : "+usern;
+			alert("Welcome : "+ usern);
+			}
+		}
+	
+
+
+</script>
+<title>Login Details</title>
+</head>
+<body bgcolor = "black">
+<h1><font face="Mycrosoft Corsiva" color="Lime"><center>Please enter trainee details!</center></font></h1>
+
+<font color = "yellow" face = "comic sans ms">
+
+<form action = "del.html" onsubmit="return validate()">
+
+<table cellspacing ="0" cellpadding = "10" align = "center">
+<tr><td>Username </td><td><input type = "text" id = "user" name = "user"></td><td><span id = 'erru'></span></td></tr>
+<tr><td>Password </td><td><input type = "password" id = "pass" name = "pass"></td><td><span id = 'erre'></span></td></tr>
+<tr><td align = "center"><input type = "submit" value = "Login"></td><td align = "center"><input type = "reset" value = "Clear"></td><td><span id = 'succ'></span></td></tr>
+</table>
+</form>
+
+</font>
+</body>
+</html>

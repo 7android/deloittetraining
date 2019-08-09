@@ -1,0 +1,29 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
+<html>
+   <head>
+   </head>
+   <body>
+      <fmt:bundle basename = "com.Example_En" prefix = "count.">
+         <fmt:message key = "one"/><br/>
+         <fmt:message key = "two"/><br/>
+         <fmt:message key = "three"/><br/>
+      </fmt:bundle>
+   </body>
+</html>
+
+---------
+package com;
+import java.util.ListResourceBundle;
+public class Example_En extends ListResourceBundle 
+{
+   public Object[][] getContents() 
+   {
+      return contents;
+   }
+   static final Object[][] contents = {
+      {"count.one", "CRICKET"},
+      {"count.two", "FOOTBALL"},
+      {"count.three", "HOCKEY"},
+   };
+}

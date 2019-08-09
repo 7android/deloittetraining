@@ -1,0 +1,26 @@
+  
+h1 { color : Lime ;
+	 font-family : "Monotype Corsiva"}
+h1.p { color : fuchsia ;
+	 font-family : "Monotype Corsiva"}
+h2 { color : powderblue;
+	 font-family :"Comic sans ms" }
+div  {
+		color : green;
+}
+#mydiv h2 {
+	color : yellow;
+}
+body { background : black url(pup.gif) repeat left top;}
+table {
+		border : 10px solid blue;
+		background-color: powderblue;
+		width : 50%;
+		height: 50%;
+		vertical-align: bottom;
+		padding : 10px ;
+		cell-border : 1px blue;
+		}
+a {
+	color: teal;
+}
